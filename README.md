@@ -11,6 +11,8 @@ Can display a static gradient effect.
 Can also display keys in sequence based on a converted midi file. (with variable delays and minimum key lengths)
 This is pretty fun for learning.
 
+Video for that: https://youtu.be/64h5l6f1TDY
+
 It's controlled via HTTP:
 
 ![Alt text](/pictures/webui.jpg "")
