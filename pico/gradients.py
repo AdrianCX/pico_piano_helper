@@ -36,7 +36,7 @@ class Gradient:
         if key >=0 and key < 61:
             self.keys[key] = time.ticks_ms() + 5100
             #green = (0, 255, 0)
-            self.strip.set_pixel(key, colors_rgb[(key*3323)%len(colors_rgb)])
+            self.strip.set_pixel(key, colors_rgb[(key*time.ticks_ms()*3323)%len(colors_rgb)])
 
         self.strip.show()
     

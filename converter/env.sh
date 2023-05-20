@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -d midi ]; then
+if [ ! -f ./midi/bin/activate ]; then
     python3 -m venv ./midi
 fi
 
