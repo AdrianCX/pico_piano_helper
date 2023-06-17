@@ -12,11 +12,10 @@ colors_rgb=[(255, 0, 0),(255, 50, 0),(255, 100, 0),(255, 150, 0),(255, 200, 0),(
 class Gradient:
 
     def __init__(self):
-        numpix = 61
-        self.numpix = numpix
-        self.strip = Neopixel(numpix, 1, 0, "GRB")
+        self.numpix = 135
+        self.strip = Neopixel(self.numpix, 1, 0, "GRB")
         self.show_gradient()
-        self.keys = array.array("I", [0] * numpix)
+        self.keys = array.array("I", [0] * self.numpix)
     
     def clear_key(self, key):
         if key >=0 and key < 61:
@@ -43,7 +42,6 @@ class Gradient:
     def show_gradient(self):
         self.display_type = "gradient"
         
-        numpix = 61
         red = (255, 0, 0)
         orange = (255, 50, 0)
         yellow = (255, 100, 0)
@@ -61,7 +59,7 @@ class Gradient:
         colors = colors_rgb
         # colors = colors_rgbw
 
-        step = round(numpix / len(colors))
+        step = round(self.numpix / len(colors))
         current_pixel = 0
         self.strip.brightness(20)
 
@@ -69,7 +67,7 @@ class Gradient:
             self.strip.set_pixel_line_gradient(current_pixel, current_pixel + step, color1, color2)
             current_pixel += step
 
-        self.strip.set_pixel_line_gradient(current_pixel, numpix - 1, violet, red)
+        self.strip.set_pixel_line_gradient(current_pixel, self.numpix - 1, violet, red)
 
         self.deadline = time.ticks_add(time.ticks_ms(), 42)
 

@@ -1,8 +1,31 @@
 To use converter:
 
-example:
+A. Create environment:
+
+1. Create convert venv for python
 ```
-# source ./env.sh
+python -m venv convert
+```
+
+2. Load the env
+```
+source ./convert/bin/activate
+```
+
+3. Install requirements
+```
+pip3 install -r ./requirements.txt
+```
+
+B. Every time you want to convert, from converter folder
+
+1. Load environment created at point A:
+```
+source ./convert/bin/activate
+```
+
+2. Convert files as you wish:
+```
 python3 ./convert.py ~/Downloads/Beethoven_Fur_Elise.mid > ../pico/songs/elise_instrument1.txt
 ```
 
